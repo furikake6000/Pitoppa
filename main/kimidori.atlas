@@ -1,0 +1,43 @@
+animations {
+  id: "left_stay"
+  images {
+    image: "/assets/images/characters/kimidori/kimidori.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+animations {
+  id: "left_run"
+  images {
+    image: "/assets/images/characters/kimidori/kimidori_run.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+animations {
+  id: "right_stay"
+  images {
+    image: "/assets/images/characters/kimidori/kimidori.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "right_run"
+  images {
+    image: "/assets/images/characters/kimidori/kimidori_run.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
