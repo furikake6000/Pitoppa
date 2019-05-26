@@ -3,7 +3,7 @@ instances {
   id: "kimidori"
   prototype: "/main/kimidori.go"
   position {
-    x: 262.0
+    x: 189.0
     y: 240.0
     z: 0.0
   }
@@ -125,8 +125,9 @@ embedded_instances {
   "mass: 0.0\\n"
   "friction: 0.0\\n"
   "restitution: 0.0\\n"
-  "group: \\\"default\\\"\\n"
+  "group: \\\"stage\\\"\\n"
   "mask: \\\"default\\\"\\n"
+  "mask: \\\"players\\\"\\n"
   "embedded_collision_shape {\\n"
   "  shapes {\\n"
   "    shape_type: TYPE_BOX\\n"

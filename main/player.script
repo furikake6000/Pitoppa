@@ -5,6 +5,7 @@ local gravity = 300
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
+	self.on_ground = false
 end
 
 function final(self)
@@ -16,7 +17,6 @@ function update(self, dt)
 	local accel_pow = vmath.vector3()
 
 	local velocity = go.get("#collisionobject", "linear_velocity")
-	print(velocity)
 	
 	-- x movement
 	if self.movestate_x == hash("left") then
@@ -47,11 +47,17 @@ function update(self, dt)
 	-- apply velocity
 	local f = accel_pow * go.get("#collisionobject", "mass")
 	msg.post("#collisionobject", "apply_force", {force = f, position = go.get_world_position()})
+
+	-- reset on_ground flag
+	self.on_ground = false
 end
 
 function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Remove this function if not needed
+	if message_id == hash("collision_response") then
+		if message.group == hash("stage") then
+			self.on_ground = true
+		end
+	end
 end
 
 function on_input(self, action_id, action)
