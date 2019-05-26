@@ -125,7 +125,7 @@ embedded_instances {
   "mass: 0.0\\n"
   "friction: 0.0\\n"
   "restitution: 0.0\\n"
-  "group: \\\"stage\\\"\\n"
+  "group: \\\"floor\\\"\\n"
   "mask: \\\"default\\\"\\n"
   "mask: \\\"players\\\"\\n"
   "embedded_collision_shape {\\n"

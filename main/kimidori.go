@@ -42,7 +42,7 @@ embedded_components {
   "friction: 0.0\n"
   "restitution: 0.0\n"
   "group: \"players\"\n"
-  "mask: \"stage\"\n"
+  "mask: \"floor\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
