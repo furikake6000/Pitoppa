@@ -1,5 +1,8 @@
+require("../assets/scripts/util")
+
 local max_speed_x = 200
 local accel_x = 5000
+local friction_floor = 1000
 local jumppow = 500
 local gravity = 300
 
@@ -24,7 +27,14 @@ function update(self, dt)
 	elseif self.movestate_x == hash("right") then
 		accel_pow.x = accel_pow.x + accel_x
 	else
-		-- no input
+		if self.on_ground then
+			-- 接地時の摩擦
+			if velocity.x > 0 then
+				accel_pow.x = math.max(accel_pow.x - friction_floor, -velocity.x / dt)
+			elseif velocity.x < 0 then
+				accel_pow.x = math.min(accel_pow.x + friction_floor, -velocity.x / dt)
+			end
+		end
 	end
 	self.movestate_x = nil -- reset the state
 
