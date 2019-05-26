@@ -61,7 +61,7 @@ function on_message(self, message_id, message, sender)
 end
 
 function on_input(self, action_id, action)
-	if action_id == hash("jump") and action.pressed then
+	if action_id == hash("jump") and action.pressed and self.on_ground then
 		self.jumpflag = true
 	elseif action_id == hash("left") or action_id == hash("right") then
 		self.movestate_x = action_id
