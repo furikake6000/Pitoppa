@@ -20,19 +20,25 @@ function update(self, dt)
 	local accel_pow = vmath.vector3()
 
 	local velocity = go.get("#collisionobject", "linear_velocity")
+
+	local anim = nil
 	
 	-- x movement
 	if self.movestate_x == hash("left") then
 		accel_pow.x = accel_pow.x - accel_x
+		anim = hash("left_run")
 	elseif self.movestate_x == hash("right") then
 		accel_pow.x = accel_pow.x + accel_x
+		anim = hash("right_run")
 	else
 		if self.on_ground then
 			-- 接地時の摩擦
 			if velocity.x > 0 then
 				accel_pow.x = math.max(accel_pow.x - friction_floor, -velocity.x / dt)
+				anim = hash("right_stay")
 			elseif velocity.x < 0 then
 				accel_pow.x = math.min(accel_pow.x + friction_floor, -velocity.x / dt)
+				anim = hash("left_stay")
 			end
 		end
 	end
@@ -53,6 +59,12 @@ function update(self, dt)
 	
 	-- gravity
 	accel_pow.y = accel_pow.y - gravity
+
+	-- animation
+	if anim ~= nil and anim ~= self.current_anim then
+		msg.post("#sprite", "play_animation", { id = anim })
+		self.current_anim = anim
+	end
 	
 	-- apply velocity
 	local f = accel_pow * go.get("#collisionobject", "mass")
