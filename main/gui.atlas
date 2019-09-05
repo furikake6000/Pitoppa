@@ -1,0 +1,66 @@
+images {
+  image: "/assets/images/UI/button_Arrow.png"
+}
+images {
+  image: "/assets/images/UI/button_Continue.png"
+}
+images {
+  image: "/assets/images/UI/button_Exit.png"
+}
+images {
+  image: "/assets/images/UI/button_Freeplay.png"
+}
+images {
+  image: "/assets/images/UI/button_Gear.png"
+}
+images {
+  image: "/assets/images/UI/button_Home.png"
+}
+images {
+  image: "/assets/images/UI/button_Next.png"
+}
+images {
+  image: "/assets/images/UI/button_Replay.png"
+}
+images {
+  image: "/assets/images/UI/button_StageSelect.png"
+}
+images {
+  image: "/assets/images/UI/button_text.png"
+}
+images {
+  image: "/assets/images/UI/button_Tutorial.png"
+}
+images {
+  image: "/assets/images/UI/button_Twitter.png"
+}
+images {
+  image: "/assets/images/UI/loading.png"
+}
+images {
+  image: "/assets/images/UI/menu_back.png"
+}
+images {
+  image: "/assets/images/UI/result_back.png"
+}
+images {
+  image: "/assets/images/UI/rightbackUI_front.png"
+}
+images {
+  image: "/assets/images/UI/rightupUI_back.png"
+}
+images {
+  image: "/assets/images/UI/title_background.png"
+}
+images {
+  image: "/assets/images/UI/title_button_panel.png"
+}
+images {
+  image: "/assets/images/UI/title_character.png"
+}
+images {
+  image: "/assets/images/UI/title_logo.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
