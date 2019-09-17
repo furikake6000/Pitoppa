@@ -1,0 +1,47 @@
+local tutorial_button, continue_button, stage_button, exit_button
+local buttons
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	tutorial_button = gui.get_node("button_tutorial")
+	continue_button = gui.get_node("button_continue")
+	stage_button = gui.get_node("button_stageselect")
+	exit_button = gui.get_node("button_exit")
+	buttons = {tutorial_button, continue_button, stage_button, exit_button}
+end
+
+function on_input(self, action_id, action)
+	-- マウスオーバー
+	if action_id == nil then
+		for i, button in ipairs(buttons) do
+			if gui.pick_node(button, action.x, action.y) then
+				gui.animate(button, gui.PROP_COLOR, vmath.vector3(0.8, 0.8, 0.8, 1.0), gui.EASING_LINEAR, 0.1)
+			else
+				gui.animate(button, gui.PROP_COLOR, vmath.vector3(1.0, 1.0, 1.0, 1.0), gui.EASING_LINEAR, 0.1)
+			end
+		end
+	end
+
+	-- クリック
+	if action_id == hash("touch") and action.pressed then
+		if gui.pick_node(tutorial_button, action.x, action.y) then
+			-- Tutorial
+			print("tutorial")
+		end
+
+		if gui.pick_node(continue_button, action.x, action.y) then
+			-- Continue
+			print("continue")
+		end
+
+		if gui.pick_node(stage_button, action.x, action.y) then
+			-- Stage Select
+			print("stage select")
+		end
+
+		if gui.pick_node(exit_button, action.x, action.y) then
+			-- Exit
+			print("exit")
+		end
+	end
+end

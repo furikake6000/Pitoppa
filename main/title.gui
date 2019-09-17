@@ -1,4 +1,4 @@
-script: ""
+script: "/main/title.gui_script"
 textures {
   name: "gui"
   texture: "/main/gui.atlas"
