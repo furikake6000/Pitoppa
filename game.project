@@ -2,7 +2,7 @@
 title = Pitoppa
 
 [bootstrap]
-main_collection = /main/title.collectionc
+main_collection = /main/title/title.collectionc
 
 [input]
 game_binding = /input/game.input_bindingc
@@ -11,6 +11,8 @@ use_accelerometer = 0
 [display]
 width = 1280
 height = 720
+high_dpi = 1
+dynamic_orientation = 0
 
 [script]
 shared_state = 1

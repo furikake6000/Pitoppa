@@ -4,7 +4,7 @@ embedded_instances {
   id: "guis"
   data: "components {\n"
   "  id: \"title\"\n"
-  "  component: \"/main/title.gui\"\n"
+  "  component: \"/main/title/title.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
