@@ -41,7 +41,7 @@ function on_input(self, action_id, action)
 
 		if gui.pick_node(exit_button, action.x, action.y) then
 			-- Exit
-			print("exit")
+			msg.post("@system:", "exit", {code = 0})
 		end
 	end
 end
