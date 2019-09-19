@@ -26,7 +26,7 @@ function on_input(self, action_id, action)
 	if action_id == hash("touch") and action.pressed then
 		if gui.pick_node(tutorial_button, action.x, action.y) then
 			-- Tutorial
-			print("tutorial")
+			msg.post("/loader#tutorial", "async_load")
 		end
 
 		if gui.pick_node(continue_button, action.x, action.y) then
@@ -43,5 +43,13 @@ function on_input(self, action_id, action)
 			-- Exit
 			msg.post("@system:", "exit", {code = 0})
 		end
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("proxy_loaded") then
+		msg.post(sender, "init")
+		msg.post(sender, "enable")
+		print("finish loading a collection.")
 	end
 end
