@@ -1,12 +1,36 @@
+-- 現在アクティブになっているシーン
+-- （基本的にシーンは排他的）
+local current_scene_name
+local loading_scene_name
+
 function init(self)
 	-- ロードと同時にtitle読み込み
-	msg.post("/loader#title", "acquire_input_focus")
-	msg.post("/loader#title", "async_load")
+	load_scene("title")
 end
 
 function on_message(self, message_id, message, sender)
+	if message_id == hash("load_scene") then
+		load_scene(message.scene_name)
+	end
+	
 	if message_id == hash("proxy_loaded") then
 		msg.post(sender, "init")
 		msg.post(sender, "enable")
+		if current_scene_name ~= nil then
+			unload_scene(current_scene_name)
+		end
+		current_scene_name = loading_scene_name
 	end
+end
+
+function load_scene(scene_name)
+	loading_scene_name = scene_name
+	msg.post(string.format("/loader#%s", scene_name), "acquire_input_focus")
+	msg.post(string.format("/loader#%s", scene_name), "async_load")
+end
+
+function unload_scene()
+	msg.post(string.format("/loader#%s", current_scene_name), "disable")
+	msg.post(string.format("/loader#%s", current_scene_name), "final")
+	msg.post(string.format("/loader#%s", current_scene_name), "unload")
 end

@@ -26,7 +26,7 @@ function on_input(self, action_id, action)
 	if action_id == hash("touch") and action.pressed then
 		if gui.pick_node(tutorial_button, action.x, action.y) then
 			-- Tutorial
-			msg.post("/loader#tutorial", "async_load")
+			msg.post("main:/scripts#main", "load_scene", { scene_name = "tutorial" })
 		end
 
 		if gui.pick_node(continue_button, action.x, action.y) then
