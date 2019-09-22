@@ -1,4 +1,4 @@
-tile_set: "/main/stage.tilesource"
+tile_set: "/main/stage/stage.tilesource"
 layers {
   id: "layer1"
   z: 0.0
