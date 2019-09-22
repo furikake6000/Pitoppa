@@ -9,6 +9,7 @@ local gravity = 300
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.on_ground = false
+	go.animate("/camera#script", "zoom", go.PLAYBACK_ONCE_FORWARD, 2.5, go.EASING_OUTSINE, 1.0)
 end
 
 function final(self)
