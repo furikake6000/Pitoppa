@@ -3,7 +3,7 @@ instances {
   id: "kimidori"
   prototype: "/main/kimidori.go"
   position {
-    x: 104.0
+    x: -40.0
     y: 264.0
     z: 0.0
   }
@@ -59,7 +59,37 @@ instances {
 }
 scale_along_z: 0
 embedded_instances {
+  id: "guis"
+  data: ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
   id: "stage"
+  children: "dir_sign_right"
+  children: "dir_sign_right1"
+  children: "dir_sign_right2"
+  children: "dir_sign_right3"
+  children: "dir_sign_right4"
+  children: "tutorial_sign_1"
+  children: "tutorial_sign_2"
+  children: "tutorial_sign_3"
+  children: "tutorial_sign_4"
+  children: "tutorial_sign_5"
   data: "components {\n"
   "  id: \"stage\"\n"
   "  component: \"/main/tutorial/tutorial.tilemap\"\n"
@@ -120,11 +150,31 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "guis"
-  data: ""
+  id: "tutorial_sign_1"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"tutorial_sign_1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
-    x: 0.0
-    y: 0.0
+    x: 32.0
+    y: 265.0
     z: 0.0
   }
   rotation {
@@ -134,8 +184,368 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 1.0
-    y: 1.0
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "tutorial_sign_2"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"tutorial_sign_2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2350.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 154.0
+    y: 265.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "dir_sign_right"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"dir_sign_right\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: -190.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -154.0
+    y: 265.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "tutorial_sign_3"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"tutorial_sign_3\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 960.0\n"
+  "    y: -180.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 154.0
+    y: 265.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "dir_sign_right1"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"dir_sign_right\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: -190.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 739.0
+    y: 358.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.25881904
+    w: 0.9659258
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "dir_sign_right2"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"dir_sign_right\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: -190.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 1304.0
+    y: 257.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.087155744
+    w: 0.9961947
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "dir_sign_right3"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"dir_sign_right\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: -190.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 1851.0
+    y: 410.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.64278764
+    w: 0.76604444
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "dir_sign_right4"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"dir_sign_right\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: -190.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 1958.0
+    y: 517.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.17364818
+    w: 0.9848077
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "tutorial_sign_4"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"tutorial_sign_4\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 9420.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 154.0
+    y: 265.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "tutorial_sign_5"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/main/field.atlas\\\"\\n"
+  "default_animation: \\\"tutorial_sign_5\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 10597.412\n"
+  "    y: 62.897\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.17364818\n"
+  "    w: 0.9848077\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 154.0
+    y: 265.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
     z: 1.0
   }
 }

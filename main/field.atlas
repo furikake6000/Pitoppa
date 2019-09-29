@@ -1,12 +1,29 @@
-animations {
-  id: "field"
-  images {
-    image: "/assets/images/field/only_kimidori_wall.png"
-  }
-  playback: PLAYBACK_LOOP_FORWARD
-  fps: 60
-  flip_horizontal: 0
-  flip_vertical: 0
+images {
+  image: "/assets/images/field/tutorial_sign_1.png"
+}
+images {
+  image: "/assets/images/field/only_kimidori_wall.png"
+}
+images {
+  image: "/assets/images/field/dir_sign_top.png"
+}
+images {
+  image: "/assets/images/field/tutorial_sign_2.png"
+}
+images {
+  image: "/assets/images/field/tutorial_sign_3.png"
+}
+images {
+  image: "/assets/images/field/dir_sign_right.png"
+}
+images {
+  image: "/assets/images/field/tutorial_sign_4.png"
+}
+images {
+  image: "/assets/images/field/tutorial_sign_5.png"
+}
+images {
+  image: "/assets/images/field/stage_tiles.png"
 }
 margin: 0
 extrude_borders: 0
