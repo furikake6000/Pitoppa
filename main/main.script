@@ -17,8 +17,10 @@ function on_message(self, message_id, message, sender)
 		msg.post(sender, "init")
 		msg.post(sender, "enable")
 		if current_scene_name ~= nil then
+			msg.post(string.format("%s:/bgm#sound", current_scene_name), "stop_sound")
 			unload_scene(current_scene_name)
 		end
+		msg.post(string.format("%s:/bgm#sound", loading_scene_name), "play_sound")
 		current_scene_name = loading_scene_name
 	end
 end
